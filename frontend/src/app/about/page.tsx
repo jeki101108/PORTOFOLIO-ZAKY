@@ -27,10 +27,10 @@ export default function AboutPage() {
 
                         <div className="w-full space-y-3">
                             {[
-                                { label: "Nama", value: "Muhammad Zaky Alkhaer Ahmad" },
+                                { label: "Nama", value: "MUHAMMAD ZAKY ALKHAER AHMAD" },
                                 { label: "Kelas", value: "XII RPL 1" },
                                 { label: "Sekolah", value: "SMK TELKOM MAKASSAR" },
-                                { label: "Lokasi", value: "Indonesia" },
+                                { label: "Lokasi", value: "INDONESIA,MAKASSAR" },
                             ].map((item) => (
                                 <div
                                     key={item.label}
@@ -53,7 +53,7 @@ export default function AboutPage() {
                             </h2>
                             <p className="text-gray-400 leading-relaxed">
                                 Saya adalah siswa kelas XII jurusan Rekayasa Perangkat Lunak
-                                (RPL) yang memiliki passion besar di bidang web development.
+                                (RPL) SMK TELKOM MAKASSAR,Saya memiliki passion dalam bidang Backend Development dan sedikit senang dengan UI/UX.
                                 Saya senang membangun website dan aplikasi web yang tidak
                                 hanya fungsional, tetapi juga memiliki tampilan yang menarik
                                 dan pengalaman pengguna yang baik.

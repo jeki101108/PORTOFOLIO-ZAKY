@@ -4,13 +4,16 @@ const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/portfolio", label: "Portfolio" },
+  { href: "/skills", label: "Skills" },
+  { href: "/certificates", label: "Certificates" },
+  { href: "/testimonials", label: "Testimonials" },
   { href: "/contact", label: "Contact" },
 ];
 
 const socialLinks = [
-  { href: "#", label: "GitHub" },
-  { href: "#", label: "LinkedIn" },
-  { href: "#", label: "Instagram" },
+  { href: "https://github.com/jeki101108", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/muhammad-zaky-alkhaer-ahmad-8295a7426?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn" },
+  { href: "https://www.instagram.com/zakylkhr_?igsh=MWc1cGF0bTBlbGljaA%3D%3D", label: "Instagram" },
 ];
 
 export default function Footer() {
@@ -21,7 +24,7 @@ export default function Footer() {
           {/* Ini untuk brandnya */}
           <div>
             <h3 className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent mb-3">
-              MyPortfolio
+              MyPortofolio
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Siswa XII RPL 1 yang passionate di bidang web development.

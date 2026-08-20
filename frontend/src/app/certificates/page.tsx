@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const certificates = [
   {
     id: 1,
@@ -7,15 +9,17 @@ const certificates = [
     credentialId: "Cert ID: 92a2f8bd-dd1d-456e-b46b-1a1003eb0467",
     verificationUrl:
       "https://www.credly.com/badges/f7a98a24-4e8f-4352-81aa-f6b762fb4a11/public_url",
+    image: "/certificates/certificates1.jpg",
   },
   {
     id: 2,
-    title: "JavaScript Essentials 2",
-    issuer: "Cisco",
-    date: "June 11, 2026",
+    title: "AiClassASEAN",
+    issuer: "Asean Skills",
+    date: "July 22, 2026",
     credentialId: "Cert ID: 92a2f8bd-dd1d-456e-b46b-1a1003eb0467",
     verificationUrl:
-      "https://www.credly.com/badges/f7a98a24-4e8f-4352-81aa-f6b762fb4a11/public_url",
+      "https://www.aiclassasean.org/profile",
+    image: "/certificates/certificates2.jpg",
   },
   {
     id: 3,
@@ -25,6 +29,7 @@ const certificates = [
     credentialId: "Cert ID: 92a2f8bd-dd1d-456e-b46b-1a1003eb0467",
     verificationUrl:
       "https://www.credly.com/badges/f7a98a24-4e8f-4352-81aa-f6b762fb4a11/public_url",
+    image: "/certificates/certificates3.jpg",
   },
 ];
 
@@ -46,8 +51,13 @@ export default function CertificatePage() {
             className="bg-gray-900/60 border border-gray-800 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/50 flex flex-col justify-between"
           >
             <div>
-              <div className="w-12 h-12 rounded-lg bg-indigo-500/10 flex items-center justify-center mb-4 text-indigo-400 font-bold border border-indigo-500/20">
-                📜
+              <div className="relative w-full aspect-video rounded-lg overflow-hidden mb-4 border border-indigo-500/20">
+                <Image
+                  src={cert.image}
+                  alt={cert.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <h3 className="text-lg font-bold text-white mb-2 hover:text-indigo-400 transition-colors duration-300">
                 {cert.title}
