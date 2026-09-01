@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -7,7 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/portofolio", label: "Portofolio" },
+  { href: "/portfolio", label: "Portfolio" },
   { href: "/skills", label: "Skills" },
   { href: "/certificates", label: "Certificates" },
   { href: "/testimonials", label: "Testimonials" },
@@ -18,6 +18,10 @@ export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  if (pathname?.startsWith("/admin")) {
+    return null;
+  }
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-xl border-b border-gray-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,9 +29,9 @@ export default function Navbar() {
           {/* Ini Logo */}
           <Link
             href="/"
-            className="text-xl font-bold bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent hover:from-indigo-300 hover:to-violet-300 transition-all duration-300"
+            className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent hover:from-indigo-300 hover:to-violet-300 transition-all duration-300"
           >
-            MyPortofolio
+            MyPortfolio
           </Link>
 
           {/* Navigasi untuk Desktop */}
@@ -53,7 +57,7 @@ export default function Navbar() {
           {/* Tombol Hamburger untuk layar mobile */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300"
+            className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50"
             aria-label="Toggle menu"
           >
             <div className="flex flex-col gap-1.5">
@@ -76,7 +80,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Menu untuk layar mobile */}
+        {/* menu untuk layar mobile */}
         <div
           className={`md:hidden transition-all duration-300 overflow-hidden ${
             mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
