@@ -12,7 +12,7 @@ const adminNavItems = [
   { href: "/admin", label: "Dashboard", icon: "📊" },
   { href: "/admin/projects", label: "Projects", icon: "🚀" },
   { href: "/admin/skills", label: "Skills", icon: "⚡" },
-  { href: "/admin/certificates", label: "Certificates", icon: "🏅" },
+  { href: "/admin/certificates", label: "Certificates", icon: "🏆" },
   { href: "/admin/testimonials", label: "Testimonials", icon: "💬" },
   { href: "/admin/messages", label: "Messages", icon: "📩" },
 ];
@@ -32,14 +32,14 @@ export default function AdminSidebar({ isOpen, onClose }: AdminSidebarProps) {
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed top-0 left-0 bottom-0 z-50 w-64 bg-gray-900/95 backdrop-blur-xl border-r border-gray-800/80 flex flex-col transition-transform duration-300 lg:translate-x-0 ${
+        className={`fixed top-0 left-0 bottom-0 z-50 w-64 bg-gray-900/95 backdrop-blur-xl border-r border-gray-800/80 flex flex-col transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Brand Header */}
         <div className="h-16 px-6 flex items-center justify-between border-b border-gray-800/60">
           <Link href="/admin" className="flex items-center gap-2">
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center text-white font-bold text-sm">
+            <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center text-white font-bold text-xs">
               MP
             </span>
             <div>
@@ -95,7 +95,7 @@ export default function AdminSidebar({ isOpen, onClose }: AdminSidebarProps) {
         <div className="p-4 border-t border-gray-800/60">
           <Link
             href="/"
-            className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-gray-800/60 hover:bg-gray-800 text-gray-300 hover:text-white transition-colors duration-200"
+            className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-gray-800/60 hover:bg-gray-800 text-gray-300 hover:text-white transition-colors"
           >
             <span>🌐</span>
             <span>Lihat Website Publik</span>

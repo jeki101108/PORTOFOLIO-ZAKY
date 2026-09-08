@@ -83,7 +83,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <p className="text-gray-600 text-xs">
-              Built with Next.js & Tailwind CSS
+              Built with Next.js &amp; Tailwind CSS
             </p>
             <span className="text-gray-700 text-xs">•</span>
             <Link

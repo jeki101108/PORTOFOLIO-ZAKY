@@ -90,11 +90,10 @@ export default function ContactPage() {
                 {/* Feedback Status */}
                 {status && (
                   <div
-                    className={`p-4 rounded-xl text-sm border ${
-                      status.success
+                    className={`p-4 rounded-xl text-sm border ${status.success
                         ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
                         : "bg-rose-500/10 text-rose-400 border-rose-500/20"
-                    }`}
+                      }`}
                   >
                     {status.text}
                   </div>
@@ -198,19 +197,19 @@ export default function ContactPage() {
                 {
                   icon: "📧",
                   title: "Email",
-                  value: "alif@example.com",
+                  value: "muhzakyalkhaer@gmail.com",
                   description: "Kirim email kapan saja, saya akan membalas secepatnya.",
                 },
                 {
                   icon: "📞",
                   title: "Telepon",
-                  value: "+62 812-xxxx-xxxx",
+                  value: "+62 812-4303-4442",
                   description: "Tersedia di jam sekolah (08.00 – 15.00 WIB).",
                 },
                 {
                   icon: "📍",
                   title: "Lokasi",
-                  value: "Indonesia",
+                  value: "Indonesia,Makassar",
                   description: "Bisa bekerja sama secara remote maupun offline.",
                 },
               ].map((item) => (
@@ -239,13 +238,25 @@ export default function ContactPage() {
               <div className="p-6 rounded-2xl bg-gray-900/50 border border-gray-800/50">
                 <h3 className="text-white font-semibold mb-4">Social Media</h3>
                 <div className="flex gap-3">
-                  {["GitHub", "LinkedIn", "Instagram"].map((social) => (
+                  {[
+                    { name: "GitHub", url: "https://github.com/jeki101108" },
+                    {
+                      name: "LinkedIn",
+                      url: "https://www.linkedin.com/in/muhammad-zaky-alkhaer-ahmad-8295a7426",
+                    },
+                    {
+                      name: "Instagram",
+                      url: "https://www.instagram.com/kyy101108",
+                    },
+                  ].map((social) => (
                     <a
-                      key={social}
-                      href="#"
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="px-4 py-2 rounded-xl bg-gray-800/50 border border-gray-700/50 text-gray-400 text-sm hover:border-indigo-500/30 hover:bg-indigo-500/10 hover:text-white transition-all duration-300"
                     >
-                      {social}
+                      {social.name}
                     </a>
                   ))}
                 </div>

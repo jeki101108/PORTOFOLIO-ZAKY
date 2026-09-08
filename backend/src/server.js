@@ -3,7 +3,6 @@ const cors = require("cors");
 const app = express();
 
 const PORT = 5000;
-
 const db = require("./config/db");
 
 const heroRoute = require("./routes/heroRoute");

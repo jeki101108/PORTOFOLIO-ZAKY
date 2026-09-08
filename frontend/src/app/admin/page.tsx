@@ -30,6 +30,7 @@ export default function AdminDashboardPage() {
         setLoading(false);
       }
     }
+
     loadDashboardData();
   }, []);
 
@@ -53,7 +54,7 @@ export default function AdminDashboardPage() {
     {
       title: "Certificates",
       value: stats?.total_certificates ?? 0,
-      icon: "🏅",
+      icon: "🏆",
       color: "from-emerald-500 to-teal-500",
       href: "/admin/certificates",
       description: "Sertifikat kompetensi",
@@ -65,23 +66,27 @@ export default function AdminDashboardPage() {
       color: "from-purple-500 to-pink-500",
       href: "/admin/messages",
       description: `${stats?.unread_messages ?? 0} belum dibaca`,
-      badge: stats?.unread_messages ? `${stats.unread_messages} Baru` : undefined,
+      badge: stats?.unread_messages
+        ? `${stats.unread_messages} Baru`
+        : undefined,
     },
   ];
 
   return (
     <div className="space-y-8">
       {/* Welcome Banner */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-900/40 via-violet-900/30 to-purple-900/20 border border-indigo-500/20">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-900/40 via-violet-900/30 to-purple-900/20 border border-indigo-800/30 p-6 sm:p-8">
         <div className="relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold mb-4">
             <span>✨</span> CMS Admin Panel v1.0
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
             Selamat Datang di Dashboard Admin! 👋
           </h2>
           <p className="text-gray-400 text-sm sm:text-base max-w-2xl">
-            Kelola konten portofolio dinamis Anda mulai dari proyek, keahlian, sertifikasi, hingga pesan kontak yang masuk secara terpusat.
+            Kelola konten portofolio dinamis Anda mulai dari proyek,
+            keahlian, sertifikasi, hingga pesan kontak yang masuk secara
+            terpusat.
           </p>
         </div>
 
@@ -179,7 +184,7 @@ export default function AdminDashboardPage() {
               {messages.slice(0, 5).map((msg) => (
                 <div
                   key={msg.id}
-                  className="p-4 rounded-xl bg-gray-950/60 border border-gray-800/50 hover:border-gray-700/60 transition-colors flex items-start gap-2"
+                  className="p-4 rounded-xl bg-gray-950/60 border border-gray-800/50 hover:border-gray-700/60 transition-colors flex items-start justify-between gap-4"
                 >
                   <div className="space-y-1 min-w-0">
                     <div className="flex items-center gap-2">
@@ -220,10 +225,10 @@ export default function AdminDashboardPage() {
           <div className="space-y-2.5">
             <Link
               href="/admin/projects"
-              className="flex items-center justify-between p-3.5 rounded-xl bg-gray-950/60 border border-gray-800/60 hover:border-indigo-500/40 transition-all"
+              className="group flex items-center justify-between p-3.5 rounded-xl bg-gray-950/60 border border-gray-800/60 hover:border-indigo-500/40 transition-colors"
             >
               <div className="flex items-center gap-3">
-                <span className="text-xl">➕</span>
+                <span className="text-xl">🚀</span>
                 <span className="font-medium text-gray-200 group-hover:text-white">
                   Kelola Data Proyek
                 </span>
@@ -235,7 +240,7 @@ export default function AdminDashboardPage() {
 
             <Link
               href="/admin/skills"
-              className="flex items-center justify-between p-3.5 rounded-xl bg-gray-950/60 border border-gray-800/60 hover:border-amber-500/40 transition-all"
+              className="group flex items-center justify-between p-3.5 rounded-xl bg-gray-950/60 border border-gray-800/60 hover:border-amber-500/40 transition-colors"
             >
               <div className="flex items-center gap-3">
                 <span className="text-xl">⚡</span>
@@ -250,10 +255,10 @@ export default function AdminDashboardPage() {
 
             <Link
               href="/admin/certificates"
-              className="flex items-center justify-between p-3.5 rounded-xl bg-gray-950/60 border border-gray-800/60 hover:border-emerald-500/40 transition-all"
+              className="group flex items-center justify-between p-3.5 rounded-xl bg-gray-950/60 border border-gray-800/60 hover:border-emerald-500/40 transition-colors"
             >
               <div className="flex items-center gap-3">
-                <span className="text-xl">🏅</span>
+                <span className="text-xl">🏆</span>
                 <span className="font-medium text-gray-200 group-hover:text-white">
                   Kelola Sertifikat
                 </span>
@@ -265,7 +270,7 @@ export default function AdminDashboardPage() {
 
             <Link
               href="/admin/testimonials"
-              className="flex items-center justify-between p-3.5 rounded-xl bg-gray-950/60 border border-gray-800/60 hover:border-purple-500/40 transition-all"
+              className="group flex items-center justify-between p-3.5 rounded-xl bg-gray-950/60 border border-gray-800/60 hover:border-purple-500/40 transition-colors"
             >
               <div className="flex items-center gap-3">
                 <span className="text-xl">💬</span>
@@ -280,8 +285,10 @@ export default function AdminDashboardPage() {
           </div>
 
           <div className="pt-4 mt-4 border-t border-gray-800/60">
-            <div className="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs leading-relaxed">
-              💡 <strong>Tips Pembelajaran:</strong> Pada pertemuan selanjutnya, kita akan membangun form pembuatan dan pengeditan data (CRUD) untuk masing-masing modul.
+            <div className="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-xs text-indigo-300 leading-relaxed">
+              💡 <strong>Tips Pembelajaran:</strong> Pada pertemuan
+              selanjutnya, kita akan membangun form pembuatan dan pengeditan
+              data (CRUD) untuk masing-masing modul di atas.
             </div>
           </div>
         </div>
