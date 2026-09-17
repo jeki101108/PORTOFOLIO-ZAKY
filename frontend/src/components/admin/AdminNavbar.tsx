@@ -61,7 +61,7 @@ export default function AdminNavbar({ onMenuToggle }: AdminNavbarProps) {
           </div>
           <div className="hidden md:block text-left">
             <p className="text-xs text-white font-semibold leading-none">
-              Muh Alif Anhar
+              Muh zaky alkhaer ahmad
             </p>
             <p className="text-[10px] text-gray-400 mt-0.5 leading-none">
               Admin XII RPL 1

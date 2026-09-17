@@ -6,14 +6,16 @@ import { usePathname } from "next/navigation";
 const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/contact", label: "Contact" },
-];
+  { href: "/portofolio", label: "Portofolio" },
+  { href: "/skills", label: "Skills" },
+  { href: "/certificates", label: "Certificates" },
+  { href: "/testimonials", label: "Testimonials" },
+  { href: "/contact", label: "Contact" },];
 
 const socialLinks = [
-  { href: "#", label: "GitHub" },
-  { href: "#", label: "LinkedIn" },
-  { href: "#", label: "Instagram" },
+  { href: "https://github.com/jeki101108", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/muhammad-zaky-alkhaer-ahmad-8295a7426?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn" },
+  { href: "https://www.instagram.com/kyy101108?igsh=MWc1cGF0bTBlbGljaA%3D%3D", label: "Instagram" },
 ];
 
 export default function Footer() {

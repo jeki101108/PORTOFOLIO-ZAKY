@@ -32,9 +32,9 @@ export default function AdminSidebar({ isOpen, onClose }: AdminSidebarProps) {
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed top-0 left-0 bottom-0 z-50 w-64 bg-gray-900/95 backdrop-blur-xl border-r border-gray-800/80 flex flex-col transition-transform duration-300 ${
+        className={`fixed lg:static top-0 left-0 bottom-0 z-50 w-64 bg-gray-900/95 backdrop-blur-xl border-r border-gray-800/80 flex flex-col transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        } lg:translate-x-0`}
       >
         {/* Brand Header */}
         <div className="h-16 px-6 flex items-center justify-between border-b border-gray-800/60">
@@ -44,7 +44,7 @@ export default function AdminSidebar({ isOpen, onClose }: AdminSidebarProps) {
             </span>
             <div>
               <h2 className="text-sm font-bold text-white leading-tight">
-                MyPortfolio
+                MyPortofolio
               </h2>
               <span className="text-[10px] text-indigo-400 font-semibold tracking-wider uppercase">
                 Admin Panel
@@ -66,8 +66,8 @@ export default function AdminSidebar({ isOpen, onClose }: AdminSidebarProps) {
           <div className="px-3 pb-2 text-[11px] font-semibold text-gray-500 uppercase tracking-wider">
             Menu Utama
           </div>
-
           {adminNavItems.map((item) => {
+
             const isActive =
               item.href === "/admin"
                 ? pathname === "/admin"
