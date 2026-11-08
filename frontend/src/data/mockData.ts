@@ -27,6 +27,7 @@ export interface Certificate {
   date: string;
   credentialId: string;
   verificationUrl: string;
+  image?: string;
 }
 
 export interface Testimonial {
